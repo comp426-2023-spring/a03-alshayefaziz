@@ -42,3 +42,14 @@ if (arg.r || arg.rules) {
     console.log(rules);
     process.exit(0);
 }
+
+let humanTurn = arg._[0];
+
+try {
+    console.log(Json.stringify(rpsls(humanTurn)));
+    process.exit(0);
+} catch (e) {
+    console.log(help);
+    console.log(rules);
+    process.exit(0);
+}
